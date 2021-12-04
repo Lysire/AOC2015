@@ -1,6 +1,6 @@
 def process_input(filename)
   lines = File.readlines(filename)
-return lines[0]
+  return lines[0]
 end
 
 def determine_level(par_string)
@@ -9,7 +9,7 @@ def determine_level(par_string)
     res += 1 if c == "("
     res -= 1 if c == ")"
   }
-return res
+  return res
 end
 
 def determine_pos(par_string)
@@ -21,7 +21,7 @@ def determine_pos(par_string)
     res -= 1 if c == ")"
     break if res < 0
   }
-return pos
+  return pos
 end
 
 par_string = process_input(ARGV[0])
